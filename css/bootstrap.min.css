@@ -2687,7 +2687,7 @@ textarea.form-control-lg {
 .form-range::-moz-range-thumb {
     width: 1rem;
     height: 1rem;
-    background-color: #13357b;
+    background-color: #E0BB20;
     border: 0;
     border-radius: 1rem;
     -moz-transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
@@ -8344,7 +8344,7 @@ fieldset:disabled .btn {
 }
 
 .text-primary {
-    color: #13357b !important
+    color: #E0BB20 !important
 }
 
 .text-secondary {
@@ -8400,7 +8400,7 @@ fieldset:disabled .btn {
 }
 
 .bg-primary {
-    background-color: #13357b !important
+    background-color: #841818 !important
 }
 
 .bg-secondary {
