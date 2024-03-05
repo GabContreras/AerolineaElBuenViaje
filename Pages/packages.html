@@ -28,6 +28,9 @@
 
     <!-- Template Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 
 <body>
@@ -270,39 +273,39 @@
                                 <div class="col-md-6">
                                     <div class="form-floating">
                                         <input type="text" class="form-control bg-white border-0" id="name"
-                                            placeholder="Your Name">
+                                            placeholder="Your Name" required>
                                         <label for="name">Tu Nombre</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
                                         <input type="email" class="form-control bg-white border-0" id="email"
-                                            placeholder="Your Email">
-                                        <label for="email">Tu correo electrónico</label>
+                                            placeholder="Your Email" required>
+                                        <label for="email">Tu correo electrónico </label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-floating date" id="date3" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-white border-0" id="datetime"
-                                            placeholder="Date & Time" data-target="#date3"
-                                            data-toggle="datetimepicker" />
-                                        <label for="datetime">Fecha y hora del viaje</label>
+                                    <div class="form-floating" id="datePicker">
+                                        <input type="text" id="datetime" class="form-control bg-white border-0"
+                                            placeholder="Fecha y hora del viaje" required>
+                                            <label for="datetime">Fecha y hora </label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <select class="form-select bg-white border-0" id="select1">
+                                        <select class="form-select bg-white border-0" id="select1" required>
                                             <option value="1">Machu Picchu</option>
                                             <option value="2">Paris</option>
                                             <option value="3">Torre de Pisa</option>
                                             <option value="4">Cataratas del Niagara</option>
+                                            <option value="5">Otro (Especificar en apartado de peticiones)</option>
                                         </select>
                                         <label for="select1">Destino</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <select class="form-select bg-white border-0" id="SelectPerson">
+                                        <select class="form-select bg-white border-0" id="SelectPerson" required>
                                             <option value="1">1 Persona</option>
                                             <option value="2">2 Personas</option>
                                             <option value="3">3 personas</option>
@@ -313,18 +316,19 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <select class="form-select bg-white border-0" id="CategoriesSelect">
-                                            <option value="1">Niños</option>
+                                        <select class="form-select bg-white border-0" id="CategoriesSelect" required>
+                                            <option value="1">0</option>
                                             <option value="2">1</option>
                                             <option value="3">2</option>
+                                            <option value="4">Más (especificar en apartado de peticiones)</option>
                                         </select>
-                                        <label for="CategoriesSelect">Categorias</label>
+                                        <label for="CategoriesSelect">Niños</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
                                         <textarea class="form-control bg-white border-0" placeholder="Special Request"
-                                            id="message" style="height: 100px"></textarea>
+                                            id="message" style="height: 100px" required>Ninguna en específico</textarea>
                                         <label for="message">Comentarios, consultas o peticiones </label>
                                     </div>
                                 </div>
@@ -460,17 +464,19 @@
             class="fa fa-arrow-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../lib/easing/easing.min.js"></script>
-    <script src="../lib/waypoints/waypoints.min.js"></script>
-    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="../lib/lightbox/js/lightbox.min.js"></script>
+<!-- JavaScript Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../lib/easing/easing.min.js"></script>
+<script src="../lib/waypoints/waypoints.min.js"></script>
+<script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="../lib/lightbox/js/lightbox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
 
 
-    <!-- Template Javascript -->
-    <script src="../js/main.js"></script>
+
+<!-- Template Javascript -->
+<script src="../js/main.js"></script>
 </body>
 
 </html>
