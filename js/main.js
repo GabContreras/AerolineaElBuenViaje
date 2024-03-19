@@ -30,24 +30,24 @@
         dots: true,
         loop: true,
         margin: 25,
-        nav : false,
-        navText : [
+        nav: false,
+        navText: [
             '<i class="bi bi-arrow-left"></i>',
             '<i class="bi bi-arrow-right"></i>'
         ],
         responsiveClass: true,
         responsive: {
-            0:{
-                items:1
+            0: {
+                items: 1
             },
-            768:{
-                items:2
+            768: {
+                items: 2
             },
-            992:{
-                items:2
+            992: {
+                items: 2
             },
-            1200:{
-                items:3
+            1200: {
+                items: 3
             }
         }
     });
@@ -61,24 +61,24 @@
         dots: false,
         loop: true,
         margin: 25,
-        nav : true,
-        navText : [
+        nav: true,
+        navText: [
             '<i class="bi bi-arrow-left"></i>',
             '<i class="bi bi-arrow-right"></i>'
         ],
         responsiveClass: true,
         responsive: {
-            0:{
-                items:1
+            0: {
+                items: 1
             },
-            768:{
-                items:2
+            768: {
+                items: 2
             },
-            992:{
-                items:2
+            992: {
+                items: 2
             },
-            1200:{
-                items:3
+            1200: {
+                items: 3
             }
         }
     });
@@ -92,41 +92,83 @@
         dots: true,
         loop: true,
         margin: 25,
-        nav : true,
-        navText : [
+        nav: true,
+        navText: [
             '<i class="bi bi-arrow-left"></i>',
             '<i class="bi bi-arrow-right"></i>'
         ],
         responsiveClass: true,
         responsive: {
-            0:{
-                items:1
+            0: {
+                items: 1
             },
-            768:{
-                items:2
+            768: {
+                items: 2
             },
-            992:{
-                items:2
+            992: {
+                items: 2
             },
-            1200:{
-                items:3
+            1200: {
+                items: 3
             }
         }
     });
 
-    
-   // Back to top button
-   $(window).scroll(function () {
-    if ($(this).scrollTop() > 300) {
-        $('.back-to-top').fadeIn('slow');
-    } else {
-        $('.back-to-top').fadeOut('slow');
-    }
+
+    // Back to top button
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+            $('.back-to-top').fadeIn('slow');
+        } else {
+            $('.back-to-top').fadeOut('slow');
+        }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
         return false;
-    }); 
+    });
 
 })(jQuery);
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Evita que se envíe el formulario por defecto
+
+        // Validación de campos obligatorios
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const datetimeInput = document.getElementById('datetime');
+        const destinationInput = document.getElementById('select1');
+
+        // Verificar si todos los campos son válidos
+        if (!form.checkValidity() || nameInput.value.trim() === '' || emailInput.value.trim() === '' || datetimeInput.value.trim() === '' || destinationInput.value === '') {
+            alert('Por favor completa todos los campos obligatorios.');
+            return;
+        }
+
+        // Restablecer valores de los campos
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("datetime").value = "";
+        document.getElementById("select1").value = "1";
+        document.getElementById("SelectPerson").value = "1";
+        document.getElementById("CategoriesSelect").value = "1";
+        document.getElementById("message").value = "";
+
+        // Muestra un mensaje de éxito
+        alert('¡La reserva ha sido enviada con éxito!');
+    });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    flatpickr("#datetime", {
+        enableTime: true,
+        dateFormat: "Y-m-d H:i",
+        // Configuración adicional si es necesaria
+    });
+});
